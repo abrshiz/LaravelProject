@@ -30,14 +30,4 @@ class Post extends Model
     {
         return $this->likes()->where('user_id', $user->id)->exists();
     }
-
-    public function getLikeCountAttribute()
-    {
-        return $this->likes()->count();
-    }
-
-    public function getCommentCountAttribute()
-    {
-        return $this->comments()->count();
-    }
 }
